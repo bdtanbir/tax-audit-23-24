@@ -1,0 +1,62 @@
+:root {
+  --bg: #f4f6f5;
+  --surface: #ffffff;
+  --surface-2: #f0f3f2;
+  --border: #e1e6e4;
+  --text: #15201c;
+  --muted: #5d6b66;
+  --brand: #006a4e;
+  --brand-soft: #e3f2ec;
+  --danger: #c4231f;
+  --danger-soft: #fdecea;
+  --ok: #157347;
+  --ok-soft: #e6f4ec;
+  --warn: #9a6400;
+  --warn-soft: #fff4dc;
+  --shadow: 0 1px 2px rgba(16, 24, 20, 0.04), 0 8px 24px rgba(16, 24, 20, 0.06);
+  --radius: 16px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1412;
+    --surface: #161e1b;
+    --surface-2: #1c2622;
+    --border: #2a3632;
+    --text: #e8eeeb;
+    --muted: #93a39d;
+    --brand: #3ccf95;
+    --brand-soft: #173a2e;
+    --danger: #ff6b63;
+    --danger-soft: #3a1b1a;
+    --ok: #4fd18b;
+    --ok-soft: #17321f;
+    --warn: #f0b545;
+    --warn-soft: #3a2e14;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Hind Siliguri', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bn { font-family: 'Hind Siliguri', 'Inter', sans-serif; }
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0.02em; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+button { cursor: pointer; }
+
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
