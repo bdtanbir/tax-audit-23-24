@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { records, byTin, circles, normalizeTin, formatTin, downloadCsv } from './utils'
+import ShareGoodNews from './ShareGoodNews.vue'
 
 const total = records.length
 const meta = { year: records[0].year, zone: records[0].zone }
@@ -173,6 +174,7 @@ function exportFiltered() {
               <div class="result-title">Not on this list</div>
               <div class="bn result-sub">এই TIN টি তালিকায় নেই</div>
               <p class="small muted">Checked against all {{ total }} TINs for {{ meta.zone }} zone, AY {{ meta.year }}. Other zones are not included in this file.</p>
+              <ShareGoodNews :year="meta.year" :zone="meta.zone" />
             </div>
           </div>
           <div v-else-if="status === 'invalid'" key="invalid" class="result warn">
